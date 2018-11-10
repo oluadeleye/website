@@ -1,2 +1,2 @@
 # My Website.
-This practice for using Github.
+This practice for using Github
