@@ -10,6 +10,17 @@ body{
     -webkit-filter: blur(2px);
 }
 
+a{
+    text-decoration: none;
+    color: chartreuse;
+}
+
+.follow{
+    text-align: center;
+    font-size: 30px;
+    padding: 16px;
+}
+
 
 .showcase::after {
     content: '';
