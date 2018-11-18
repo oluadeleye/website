@@ -1,100 +1,139 @@
-html {
-    background-color: lightcoral;
-    background-image: url("../website101/bitcoin2.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-size: cover;
-}
-
-body {
-    font-family: 'Slabo 27px', serif;;
-    font-size: 16px;
-    color: black;
+body{
+    background: rgba(0,0,0,0.9);
     margin: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.one {
-    display: table;
-    position: absolute;
-    height: 100%;
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+
+.showcase::after {
+    content: '';
+    height: 100vh;
     width: 100%;
+    background-image: url(showcase2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
 }
 
-.two {
-    display: table-cell;
-    vertical-align: middle;
+.showcase:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 
-.three {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 16px;
-    width: 225px;
-    text-align: center;
-    position: relative;
-}
-
-.container {
-    background: #dbe9ff;
-    border-radius: 5%;
-    box-shadow: 5px 10px 40px;
-    opacity: .5;
-    width: 225px;
-    height: 300px;
+.content{
     position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 4000ms;
 }
 
-#social-div a {
-    font-size: 24px;
+.logo{
+    border-radius: 40%;
+    opacity: .9;
 }
 
-a {
-    text-decoration: none;
+.content .title{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+
+}
+
+.content .text{
+    line-height: 1.7;
+    margin-top: 1rem;
+
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.grid-3{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light{
+    background: whitesmoke;
     color: black;
-    transition-property: color;
-    transition-duration: 1s;
 }
 
-h1 {
-    font-size: 30px;
-    font-weight: normal;
+.bg-dark{
+    background: black;
+    color: white;
+}
+
+footer p{
     margin: 0;
 }
 
-p {
-    margin: 0;
-    margin-bottom: 20px;
+footer{
+    padding: 2.2rem;
 }
 
-#profilepic {
-    border-radius: 50%;
-    width: 140px;
+@media (max-width: 560px) {
+    .showcase::after{
+        height: 50vh;
+    }
+
+    .content{
+        top: 5%;
+        margin-top: 5px;
+    }
+
+    .content .logo{
+        height: 140px;
+        width: 140px;
+    }
+
+
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+
+    .services div{
+        border-bottom: brown dashed 1px;
+        padding: 1.2rem 1rem;
+    }
 }
 
-.fa-reddit:hover {
-    color: #FF4200;
+/* Landscape */
+@media (max-height: 500px){
+    .text, .title {
+        display: none;
+    }
+    .content{
+        top: 0;
+    }
 }
-
-.fa-youtube:hover {
-    color: #FC0100;
-}
-
-.fa-twitter:hover {
-    color: #00aced;
-}
-
-.fa-github:hover {
-    color: #ffffff;
-}
-
-.fa-stack-overflow:hover {
-    color: #FF7C12;
-}
-
-/*#email {
-    text-decoration: none;
-}
-#email:hover {
-    color: #1DA1F3;
-    font-weight: bold;
-}*/
